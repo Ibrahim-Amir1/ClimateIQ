@@ -1,13 +1,13 @@
 
 import { useState } from "react";
 import {
-  Leaf,
   MapPin,
   Sprout,
   Droplets,
   ArrowRight,
 } from "lucide-react";
 import "./App.css";
+import climateLogo from "./assets/unnamed.png";
 
 function App() {
   const [zipCode, setZipCode] = useState("");
@@ -56,9 +56,11 @@ function App() {
     <div className="dashboard">
       <header className="topbar">
         <div className="brand">
-          <div className="brand-icon">
-            <Leaf size={23} />
-          </div>
+          <img
+            src={climateLogo}
+            alt="ClimateIQ logo"
+            className="brand-logo"
+          />
           <div>
             <h2>ClimateIQ</h2>
             <span>Agricultural intelligence</span>
